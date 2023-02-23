@@ -26,6 +26,7 @@ import {
   ListItemIcon,
   ListItemText,
 } from '@mui/material'
+import Link from 'next/link'
 
 const ResponsiveAppBar = () => {
   const [userMenuState, setUserMenuState] = React.useState<null | HTMLElement>(
@@ -58,34 +59,38 @@ const ResponsiveAppBar = () => {
     <Box
       sx={{ width: 250 }}
       role="presentation"
-      // onClick={toggleDrawer(false)}
+      onClick={toggleDrawer(false)}
       onKeyDown={toggleDrawer(false)}
     >
       <List>
-        <ListItem>
-          <Image
-            src="/icon.png"
-            alt="Portfolio Icon"
-            width={100}
-            height={50}
-            style={{ objectFit: 'contain' }}
-          />
-        </ListItem>
+        <Link href="/">
+          <ListItem>
+            <Image
+              src="/icon.png"
+              alt="Portfolio Icon"
+              width={100}
+              height={50}
+              style={{ objectFit: 'contain' }}
+            />
+          </ListItem>
+        </Link>
       </List>
       <Divider />
       <List>
-        <ListItem key="home" disablePadding>
-          <ListItemButton>
-            <ListItemIcon>
-              <Home></Home>
-            </ListItemIcon>
-            <ListItemText primary="Home" />
-          </ListItemButton>
-        </ListItem>
+        <Link href="/">
+          <ListItem key="home" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <Home />
+              </ListItemIcon>
+              <ListItemText primary="Home" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <ListItem key="gallery" disablePadding>
           <ListItemButton disabled>
             <ListItemIcon>
-              <CollectionsIcon></CollectionsIcon>
+              <CollectionsIcon />
             </ListItemIcon>
             <ListItemText primary="Gallery" />
           </ListItemButton>
@@ -93,7 +98,7 @@ const ResponsiveAppBar = () => {
         <ListItem key="architecture" disablePadding>
           <ListItemButton disabled>
             <ListItemIcon>
-              <ArchitectureIcon></ArchitectureIcon>
+              <ArchitectureIcon />
             </ListItemIcon>
             <ListItemText primary="Architecture" />
           </ListItemButton>
@@ -101,7 +106,7 @@ const ResponsiveAppBar = () => {
         <ListItem key="blog" disablePadding>
           <ListItemButton disabled>
             <ListItemIcon>
-              <HistoryEduIcon></HistoryEduIcon>
+              <HistoryEduIcon />
             </ListItemIcon>
             <ListItemText primary="Blog" />
           </ListItemButton>
@@ -112,23 +117,25 @@ const ResponsiveAppBar = () => {
         <ListItem key="about" disablePadding>
           <ListItemButton disabled>
             <ListItemIcon>
-              <InfoIcon></InfoIcon>
+              <InfoIcon />
             </ListItemIcon>
             <ListItemText primary="About me" />
           </ListItemButton>
         </ListItem>
-        <ListItem key="contact" disablePadding>
-          <ListItemButton disabled>
-            <ListItemIcon>
-              <ContactsIcon></ContactsIcon>
-            </ListItemIcon>
-            <ListItemText primary="Contact me" />
-          </ListItemButton>
-        </ListItem>
+        <Link href="/contact">
+          <ListItem key="contact" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <ContactsIcon />
+              </ListItemIcon>
+              <ListItemText primary="Contact me" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <ListItem key="todo" disablePadding>
           <ListItemButton disabled>
             <ListItemIcon>
-              <CheckIcon></CheckIcon>
+              <CheckIcon />
             </ListItemIcon>
             <ListItemText primary="To-do list" />
           </ListItemButton>
@@ -136,7 +143,7 @@ const ResponsiveAppBar = () => {
         <ListItem key="change" disablePadding>
           <ListItemButton disabled>
             <ListItemIcon>
-              <TrackChangesIcon></TrackChangesIcon>
+              <TrackChangesIcon />
             </ListItemIcon>
             <ListItemText primary="Change log" />
           </ListItemButton>
@@ -167,7 +174,7 @@ const ResponsiveAppBar = () => {
           </IconButton>
           {/* App Bar title */}
           <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            Andy Portfolio
+            <Link href="/">Andy Portfolio</Link>
           </Typography>
           {/* User Icon */}
           <IconButton

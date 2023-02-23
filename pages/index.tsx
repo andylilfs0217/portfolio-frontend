@@ -1,8 +1,9 @@
 import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
-import { Card, CardContent, Typography, CardHeader } from '@mui/material'
+import { Card, CardContent, Typography, CardHeader, Link } from '@mui/material'
 import Grid from '@mui/material/Unstable_Grid2'
+import LinkNext from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -125,9 +126,11 @@ export default function Home() {
                   professional experience. Users can learn more about the
                   developer and their skills and experience.
                 </Typography>
-                <Typography variant="h6" component="h6">
-                  Contact me
-                </Typography>
+                <LinkNext href="/contact">
+                  <Link variant="h6" component="a">
+                    Contact me
+                  </Link>
+                </LinkNext>
                 <Typography
                   variant="body1"
                   component="div"
