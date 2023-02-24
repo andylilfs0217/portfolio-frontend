@@ -16,11 +16,11 @@ import { marked } from 'marked'
 
 export const getStaticProps = async () => {
   const frontendRes = await fetch(
-    `${process.env.BACKEND_PATH}/github/frontend/releases`
+    `${process.env.REACT_APP_BACKEND_PATH}/github/frontend/releases`
   )
   const frontendData = await frontendRes.json()
   const backendRes = await fetch(
-    `${process.env.BACKEND_PATH}/github/backend/releases`
+    `${process.env.REACT_APP_BACKEND_PATH}/github/backend/releases`
   )
   const backendData = await backendRes.json()
   return { props: { frontend: frontendData, backend: backendData } }

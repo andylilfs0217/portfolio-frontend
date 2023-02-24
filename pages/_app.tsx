@@ -11,7 +11,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Script
         async
         strategy="afterInteractive"
-        src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.GOOGLE_ANALYTICS_ID}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=G-${process.env.REACT_APP_GOOGLE_ANALYTICS_ID}`}
       ></Script>
       <Script
         id="google-analytics"
@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-${process.env.GOOGLE_ANALYTICS_ID}', {
+            gtag('config', 'G-${process.env.REACT_APP_GOOGLE_ANALYTICS_ID}', {
               page_path: window.location.pathname
             });
           `,
