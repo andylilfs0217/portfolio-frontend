@@ -9,6 +9,7 @@ const Contact = () => {
     <>
       <Head>
         <title>Contact Me</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
         <Card sx={{ maxWidth: 800 }}>
@@ -25,7 +26,11 @@ const Contact = () => {
             <Grid container spacing={2} textAlign="center">
               <Grid xs={12}>
                 <Typography variant="body1" component="div">
-                  <a href="tel:16476840232" target="_blank" rel="noopener">
+                  <a
+                    href="tel:16476840232"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Image
                       src="/phone_icon.png"
                       alt="Phone Icon"
@@ -42,7 +47,7 @@ const Contact = () => {
                   <a
                     href="mailto:andylilfs@gmail.com"
                     target="_blank"
-                    rel="noopener"
+                    rel="noopener noreferrer"
                   >
                     <Image
                       src="/mail_icon.png"
@@ -59,7 +64,7 @@ const Contact = () => {
                 <a
                   href="https://www.linkedin.com/in/andyli0217/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src="/linkedin/linkedin_logo.png"
@@ -74,7 +79,7 @@ const Contact = () => {
                 <a
                   href="https://github.com/andylilfs0217"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src="/github/github_light_mode_logo.png"
@@ -89,7 +94,7 @@ const Contact = () => {
                 <a
                   href="https://api.whatsapp.com/send?phone=16476840232"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src="/whatsapp/whatsapp_logo.png"
@@ -104,7 +109,7 @@ const Contact = () => {
                 <a
                   href="https://www.facebook.com/andylilfs/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src="/facebook/facebook_logo.png"
@@ -119,7 +124,7 @@ const Contact = () => {
                 <a
                   href="https://www.instagram.com/andyli_lfs898/"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src="/instagram/instagram_logo.png"
@@ -134,7 +139,7 @@ const Contact = () => {
                 <a
                   href="https://www.youtube.com/channel/UC8gxJNWe4Ms5UH-DNZs7SWQ"
                   target="_blank"
-                  rel="noopener"
+                  rel="noopener noreferrer"
                 >
                   <Image
                     src="/youtube/youtube_logo.png"

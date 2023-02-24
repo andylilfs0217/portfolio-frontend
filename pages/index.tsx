@@ -11,11 +11,12 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Andy Portfolio</title>
+        <title>Andy Portfolio Home</title>
         <meta
           name="description"
           content="This is a personal website created by Andy Li."
         />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
       <main className={styles.main}>
         <Grid container spacing={2}>
@@ -126,11 +127,9 @@ export default function Home() {
                   professional experience. Users can learn more about the
                   developer and their skills and experience.
                 </Typography>
-                <LinkNext href="/contact">
-                  <Link variant="h6" component="a">
-                    Contact me
-                  </Link>
-                </LinkNext>
+                <Link variant="h6" component={LinkNext} href="/contact">
+                  Contact me
+                </Link>
                 <Typography
                   variant="body1"
                   component="div"
@@ -153,9 +152,9 @@ export default function Home() {
                   portfolio website. Users can see what new features are coming
                   and provide feedback and suggestions.
                 </Typography>
-                <Typography variant="h6" component="h6">
+                <Link component={LinkNext} href="/changelog" variant="h6">
                   Change log
-                </Typography>
+                </Link>
                 <Typography
                   variant="body1"
                   component="div"
