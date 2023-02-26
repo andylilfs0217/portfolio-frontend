@@ -70,6 +70,7 @@ const ChangeLog = ({ frontend, backend }: { frontend: any; backend: any }) => {
                             🔖 {release.tag_name}
                           </Link>
                           <div
+                            style={{ wordBreak: 'break-word' }}
                             dangerouslySetInnerHTML={{
                               __html: marked.parse(release.body),
                             }}
@@ -128,6 +129,7 @@ const ChangeLog = ({ frontend, backend }: { frontend: any; backend: any }) => {
                             🔖 {release.tag_name}
                           </Link>
                           <div
+                            style={{ wordBreak: 'break-word' }}
                             dangerouslySetInnerHTML={{
                               __html: marked.parse(release.body),
                             }}
