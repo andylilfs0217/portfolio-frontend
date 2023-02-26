@@ -114,14 +114,16 @@ const ResponsiveAppBar = () => {
       </List>
       <Divider />
       <List>
-        <ListItem key="about" disablePadding>
-          <ListItemButton disabled>
-            <ListItemIcon>
-              <InfoIcon />
-            </ListItemIcon>
-            <ListItemText primary="About me" />
-          </ListItemButton>
-        </ListItem>
+        <Link href="/about">
+          <ListItem key="about" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <InfoIcon />
+              </ListItemIcon>
+              <ListItemText primary="About me" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <Link href="/contact">
           <ListItem key="contact" disablePadding>
             <ListItemButton>
