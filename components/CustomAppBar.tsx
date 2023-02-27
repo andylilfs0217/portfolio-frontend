@@ -114,14 +114,16 @@ const ResponsiveAppBar = () => {
       </List>
       <Divider />
       <List>
-        <ListItem key="about" disablePadding>
-          <ListItemButton disabled>
-            <ListItemIcon>
-              <InfoIcon />
-            </ListItemIcon>
-            <ListItemText primary="About me" />
-          </ListItemButton>
-        </ListItem>
+        <Link href="/about">
+          <ListItem key="about" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <InfoIcon />
+              </ListItemIcon>
+              <ListItemText primary="About me" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <Link href="/contact">
           <ListItem key="contact" disablePadding>
             <ListItemButton>
@@ -132,14 +134,16 @@ const ResponsiveAppBar = () => {
             </ListItemButton>
           </ListItem>
         </Link>
-        <ListItem key="todo" disablePadding>
-          <ListItemButton disabled>
-            <ListItemIcon>
-              <CheckIcon />
-            </ListItemIcon>
-            <ListItemText primary="To-do list" />
-          </ListItemButton>
-        </ListItem>
+        <Link href="/todo">
+          <ListItem key="todo" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <CheckIcon />
+              </ListItemIcon>
+              <ListItemText primary="To-do list" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <Link href="/changelog">
           <ListItem key="changelog" disablePadding>
             <ListItemButton>

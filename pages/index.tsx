@@ -114,9 +114,9 @@ export default function Home() {
                   posts, and engage in discussions with the developer and other
                   readers.
                 </Typography>
-                <Typography variant="h6" component="h6">
+                <Link variant="h6" component={LinkNext} href="/about">
                   About me
-                </Typography>
+                </Link>
                 <Typography
                   variant="body1"
                   component="div"
@@ -139,9 +139,9 @@ export default function Home() {
                   with the developer directly. Users can use this tab to send
                   messages, make inquiries, or provide feedback.
                 </Typography>
-                <Typography variant="h6" component="h6">
+                <Link href="/todo" variant="h6" component={LinkNext}>
                   To-do list
-                </Typography>
+                </Link>
                 <Typography
                   variant="body1"
                   component="div"
