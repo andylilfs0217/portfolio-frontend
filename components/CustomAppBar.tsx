@@ -134,14 +134,16 @@ const ResponsiveAppBar = () => {
             </ListItemButton>
           </ListItem>
         </Link>
-        <ListItem key="todo" disablePadding>
-          <ListItemButton disabled>
-            <ListItemIcon>
-              <CheckIcon />
-            </ListItemIcon>
-            <ListItemText primary="To-do list" />
-          </ListItemButton>
-        </ListItem>
+        <Link href="/todo">
+          <ListItem key="todo" disablePadding>
+            <ListItemButton>
+              <ListItemIcon>
+                <CheckIcon />
+              </ListItemIcon>
+              <ListItemText primary="To-do list" />
+            </ListItemButton>
+          </ListItem>
+        </Link>
         <Link href="/changelog">
           <ListItem key="changelog" disablePadding>
             <ListItemButton>
